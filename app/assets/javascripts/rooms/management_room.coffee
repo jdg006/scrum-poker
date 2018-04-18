@@ -9,7 +9,7 @@ App.management_room =
   new_user: (user) ->
     @participant_users[user.id] = false
     @render_participant_users(user)
-
+    
   mark_card_as_voted: (data) ->
     if card = document.querySelector(@build_card_selector(data))
       card.voted = data['score']
